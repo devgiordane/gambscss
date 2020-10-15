@@ -1,0 +1,36 @@
+button {
+  text-decoration: none;
+  background: none;
+  border: 1px solid $gray;
+  outline: none;
+  cursor: pointer;
+  &:hover {
+    background: $gray;
+  }
+}
+.btn {
+  border-radius: 3px;
+  padding: 3px 5px;
+  border: none;
+  @each $color, $value in $colors {
+    &.btn-#{$color} {
+      background-color: #{$value};
+    }
+  }
+  &.btn-light {
+    color: white;
+  }
+}
+
+a.btn {
+  text-decoration: none;
+  display: inline-block;
+  text-align: center;
+  align-items: flex-start;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 13.3333px;
+  line-height: normal;
+  font-family: Arial;
+  color: black;
+}

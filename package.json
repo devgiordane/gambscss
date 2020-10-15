@@ -1,0 +1,29 @@
+{
+  "name": "gambscss",
+  "version": "1.0.0",
+  "description": "A versatile framework for when Gambiarra is the only solution.",
+  "main": "index.js",
+  "scripts": {
+    "css-build": "node-sass --omit-source-map-url scss/gambs.scss dist/css/gambs.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devgiordane/gambscss.git"
+  },
+  "keywords": [
+    "css",
+    "gambiarra"
+  ],
+  "author": "Giordane Oliveira",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/devgiordane/gambscss/issues"
+  },
+  "homepage": "https://github.com/devgiordane/gambscss#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "devDependencies": {}
+}
