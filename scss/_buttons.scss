@@ -1,22 +1,17 @@
 button {
   text-decoration: none;
   background: none;
-  border: 1px solid $gray;
+  border: 1px solid map-get($colors, "gray-300");
   outline: none;
   cursor: pointer;
   &:hover {
-    background: $gray;
+    background: map-get($colors, "gray-300");
   }
 }
 .btn {
   border-radius: 3px;
   padding: 3px 5px;
   border: none;
-  @each $color, $value in $colors {
-    &.btn-#{$color} {
-      background-color: #{$value};
-    }
-  }
   &.btn-light {
     color: white;
   }

@@ -1,14 +1,32 @@
 //color sytem
-$gray: #cccccc;
-$primary: #0d47a0;
-$secondary: #383838;
-$green: #247921;
-$red: #ff0000;
-
-$colors: (
-  "gray": $gray,
-  "primary": $primary,
-  "secondary": $secondary,
-  "green": $green,
-  "red": $red,
+$baseColors: (
+  "red": #b71c1c,
+  "pink": #f50057,
+  "purple": #4a148c,
+  "indigo": #1a237e,
+  "blue": #0d47a1,
+  "teal": #004d40,
+  "green": #63a369,
+  "yellow": #f57f17,
+  "orange": #e65100,
+  "brown": #3e2723,
+  "gray": #ddd,
 );
+$colors: ();
+
+@each $color, $value in $baseColors {
+  @for $i from 9 through 1 {
+    // ligthen($value, $i * 5%)
+    $map1: (#{$color + $i * 100}: darken($value, $i * 5%));
+    $colors: map-merge($map1, $colors);
+  }
+}
+
+@each $color, $value in $colors {
+  .#{$color} {
+    color: $value;
+  }
+  .bg-#{$color} {
+    background: $value;
+  }
+}

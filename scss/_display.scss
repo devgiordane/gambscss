@@ -19,4 +19,25 @@
   &.jc-around {
     justify-content: space-around;
   }
+  &.f-row {
+    flex-direction: row;
+  }
+  &.f-row-reverse {
+    flex-direction: row-reverse;
+  }
+  &.f-col {
+    flex-direction: column;
+  }
+  &.f-col-reverse {
+    flex-direction: column-reverse;
+  }
+  &.f-nowrap {
+    flex-wrap: nowrap;
+  }
+  &.f-wrap {
+    flex-wrap: wrap;
+  }
+  &.f-wrap-reverse {
+    flex-wrap: wrap-reverse;
+  }
 }
